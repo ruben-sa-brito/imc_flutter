@@ -34,3 +34,14 @@ void writeJson(String name, double imc, String state) async {
   await file.writeAsString(jsonContentEE);
   return;
 }
+
+Future<int> deleteJson(int index) async {
+  Directory dir = await getApplicationDocumentsDirectory();
+  final file = File('${dir.path}/local_data.json');
+  String fileContents = await file.readAsString();
+  Map<String, dynamic> jsonData = jsonDecode(fileContents);
+  jsonData["imcs"].removeAt(index);
+  final jsonContentEE = jsonEncode(jsonData);
+  await file.writeAsString(jsonContentEE);
+  return 1;
+} 
