@@ -3,12 +3,12 @@ import 'package:imc_flutter/repositories/json_loader.dart';
 
 void showModalSaveName(BuildContext context, double imc, String state) {
   TextEditingController controllerNome = TextEditingController();
-  showModalBottomSheet(
+  showModalBottomSheet(   isScrollControlled: false,
                           context: context,
                           builder: (context) {
                             return Container(
                               padding: EdgeInsets.all(16),
-                              height: 200,
+                              height: 550,
                               child: Column(
                                 children: [
                                   TextField(
@@ -26,6 +26,7 @@ void showModalSaveName(BuildContext context, double imc, String state) {
                                         onPressed: () {
                                           writeJson(controllerNome.text, imc, state);
                                           Navigator.pop(context);
+                                          FocusScope.of(context).unfocus();
                                         },
                                         child: Text("Salvar"),
                                       ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:imc_flutter/pages_drawer/drawer.dart';
 import 'package:imc_flutter/repositories/json_loader.dart';
+import 'package:imc_flutter/utils/state_colors.dart';
 import 'dart:convert';
 
 class ImcList extends StatefulWidget {
@@ -54,7 +55,7 @@ class _ImcListState extends State<ImcList> {
                           Text("${jsonData?["imcs"][i]["imc"]}"),
                           Text(
                             jsonData?["imcs"][i]["state"], // Adicionando um status abaixo do IMC
-                            style: TextStyle(color: const Color.fromARGB(255, 54, 67, 244), fontWeight: FontWeight.bold),
+                            style: TextStyle(color: setColor(jsonData?["imcs"][i]["state"]), fontWeight: FontWeight.bold),
                           )                        
                         ]
                       ),
