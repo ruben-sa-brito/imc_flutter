@@ -8,7 +8,7 @@ Color setColor(String status){
     "Magreza moderada": Color.fromARGB(255, 201, 137, 64),
     "Magreza leve": Color.fromARGB(255, 201, 187, 64),
     "Saudável": Color.fromARGB(255, 27, 146, 43),
-    "Sobrepeso": Color.fromARGB(255, 192, 201, 64),
+    "Sobrepeso": Color.fromARGB(255, 153, 201, 64),
     "Obesidade Grau I": Color.fromARGB(255, 172, 133, 60),
     "Obesidade Grau II (severa)": Color.fromARGB(255, 168, 81, 46),
     "Obesidade Grau III (mórbida)": Color.fromARGB(255, 206, 36, 13),
